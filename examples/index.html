@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@chatlychat/world — example</title>
+    <style>
+      html, body { margin: 0; height: 100%; background: #0b1020; color: #e5e7eb; font: 14px system-ui, sans-serif; }
+      canvas { display: block; }
+      #hud { position: fixed; left: 12px; top: 12px; max-width: 360px; line-height: 1.4; }
+      #hud label { display: block; margin-top: 6px; }
+      #say { position: fixed; left: 12px; bottom: 12px; display: none; gap: 6px; }
+      #say input { width: 260px; padding: 6px; }
+    </style>
+  </head>
+  <body>
+    <div id="hud">
+      <strong>Chatly in three.js</strong><br />
+      Click a card to pick it. Click the field in the panel to type.
+      <label><input id="reduce" type="checkbox" /> Reduced motion</label>
+      <label><input id="dark" type="checkbox" /> Dark scene</label>
+      <div id="live" aria-live="polite"></div>
+    </div>
+    <form id="say"><input id="draft" placeholder="Say something…" /><button>Send</button></form>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

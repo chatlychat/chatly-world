@@ -1,0 +1,76 @@
+{
+  "name": "@chatlychat/world",
+  "version": "0.3.0",
+  "description": "Render a Chatly conversation into your three.js scene: picks, speech bubbles, a world-space panel, an embodied agent and host capabilities. You keep the scene, the avatars, the input and the wayfinding.",
+  "license": "MIT",
+  "homepage": "https://github.com/chatlychat/chatly-world#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chatlychat/chatly-world.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chatlychat/chatly-world/issues"
+  },
+  "keywords": [
+    "chatly",
+    "chat",
+    "three.js",
+    "webxr",
+    "3d",
+    "sdk",
+    "vrm"
+  ],
+  "author": "Chatly",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.spec.*",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "verify:pack": "node ../../scripts/verify-package-tarball.mjs packages/world",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "example": "vite examples"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "@chatlychat/core": ">=0.5.0 <0.6.0",
+    "three": ">=0.160.0",
+    "@pixiv/three-vrm": "^3.5.5"
+  },
+  "devDependencies": {
+    "@chatlychat/core": "^0.5.0",
+    "@pixiv/three-vrm": "3.5.5",
+    "@types/node": "^20.14.10",
+    "three": "^0.186.1",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.8",
+    "vitest": "^2.1.2"
+  },
+  "peerDependenciesMeta": {
+    "@pixiv/three-vrm": {
+      "optional": true
+    }
+  }
+}
