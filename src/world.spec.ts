@@ -221,7 +221,7 @@ describe('replaceable renderers', () => {
                     data: { place: 'shop' },
                   },
                   { kind: 'url', label: 'Open', href: 'https://x.test/' },
-                  { kind: 'navigate', label: 'Shop', id: 'nav', to: 'shop' },
+                  { kind: 'navigate', label: 'Shop', id: 'nav', path: '/shop' },
                 ],
               },
             ],
@@ -238,7 +238,7 @@ describe('replaceable renderers', () => {
       conversation: f.conv,
       camera: viewerCamera(),
       onOpenUrl: (h) => urls.push(h),
-      onNavigate: (a) => void navs.push(a['to']),
+      onNavigate: (a) => void navs.push(a['path']),
       renderers: {
         renderCard: (p) => {
           props = p;
@@ -258,7 +258,7 @@ describe('replaceable renderers', () => {
     expect(walked).toHaveBeenCalledWith({ place: 'shop' }, { equivalent: eq, unprompted: false });
     expect(f.calls.reports[0]).toMatchObject({ messageId: 'm1', actionId: 'go', status: 'done' });
     expect(urls).toEqual(['https://x.test/']);
-    expect(navs).toEqual(['shop']);
+    expect(navs).toEqual(['/shop']);
     expect(f.calls.reactions).toEqual([['m1', '🔥']]);
   });
 

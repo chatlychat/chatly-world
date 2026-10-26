@@ -1,6 +1,6 @@
 {
   "name": "@chatlychat/world",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Render a Chatly conversation into your three.js scene: picks, speech bubbles, a world-space panel, an embodied agent and host capabilities. You keep the scene, the avatars, the input and the wayfinding.",
   "license": "MIT",
   "homepage": "https://github.com/chatlychat/chatly-world#readme",
@@ -55,12 +55,12 @@
     "node": ">=18"
   },
   "peerDependencies": {
-    "@chatlychat/core": ">=0.5.0 <0.6.0",
+    "@chatlychat/core": ">=0.5.0 <0.7.0",
     "three": ">=0.160.0",
     "@pixiv/three-vrm": "^3.5.5"
   },
   "devDependencies": {
-    "@chatlychat/core": "^0.5.0",
+    "@chatlychat/core": "^0.6.0",
     "@pixiv/three-vrm": "3.5.5",
     "@types/node": "^20.14.10",
     "three": "^0.186.1",

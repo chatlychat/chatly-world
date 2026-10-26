@@ -1,5 +1,9 @@
 # @chatlychat/world
 
+## 0.3.1 — 2026-10-26
+
+- The `@chatlychat/core` peer range is `>=0.5.0 <0.7.0`, so core 0.6.0 (navigate as a card tap and `more` tile) installs beside it. Nothing in world indexes presses by position.
+
 ## 0.3.0 — 2026-10-26
 
 - Card `press` now calls the core's `dispatchPress`, the same code as `conversation.press`, so the two cannot disagree. Behaviour is unchanged for `postback`, `step`, `host_event` and `url`.
