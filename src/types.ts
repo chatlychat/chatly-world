@@ -84,6 +84,9 @@ export type ConversationLike = Pick<
   | 'send'
   | 'setTyping'
   | 'requestStep'
+  // A `cards` press reaches the operator's backend through the same target
+  // `requestStep` does; `dispatchPress` requires both.
+  | 'requestCards'
   | 'reportAction'
 >;
 

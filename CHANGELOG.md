@@ -1,5 +1,12 @@
 # @chatlychat/world
 
+## 0.4.0 — 2026-10-28
+
+A minor, not a patch: `ConversationLike` requires one more method, so a host that structurally types its own conversation object must add it.
+
+- `ConversationLike` includes `requestCards`. `dispatchPress` needs it to serve a `cards` action — the button a visitor presses to pull their own order or subscription data from the operator's backend — and requiring it here is what stops a world rendering that button and silently doing nothing.
+- Peer range on `@chatlychat/core` widened to `>=0.5.0 <0.9.0` for that release.
+
 ## 0.3.1 — 2026-10-26
 
 - The `@chatlychat/core` peer range is `>=0.5.0 <0.7.0`, so core 0.6.0 (navigate as a card tap and `more` tile) installs beside it. Nothing in world indexes presses by position.
